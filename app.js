@@ -3,9 +3,13 @@ let resetBtn = document.querySelector("#reset-btn");
 let newBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+let player1 = document.querySelector("#player1");
+let player2 = document.querySelector("#player2");
 
 let turnO = true;
 let count = 0;
+let score1 = 0;
+let score2 = 0;
 
 const winPatterns = [
     [0,1,2],
@@ -59,6 +63,13 @@ const showWinner = (winner) => {
     msg.innerText = `Congratulations, Winner is ${winner}`;
     msgContainer.classList.remove("hide");
     disableBoxes();
+    if (winner === "O") {
+        score1++;
+        player1.innerText = `score : ${score1}`;
+    } else {
+        score2++;
+        player2.innerText = `score : ${score2}`;
+    }
 }
 
 const showDraw = () => {

@@ -73,3 +73,15 @@ body {
 .hide {
     display: none;
 }
+
+
+.player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.player1 {
+    padding: 20px;
+}
