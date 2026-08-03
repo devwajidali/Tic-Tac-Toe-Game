@@ -27,6 +27,17 @@ const resetGame = () => {
     enableBoxes();
     msgContainer.classList.add("hide");
     count=0;
+    score1=0;
+    score2=0;
+    player1.innerText = `score : ${score1}`;
+    player2.innerText = `score : ${score2}`;
+}
+
+const newGame = () => {
+    turnO = true;
+    enableBoxes();
+    msgContainer.classList.add("hide");
+    count=0;
 }
 
 boxes.forEach((box) => {
@@ -95,6 +106,6 @@ const checkWinner = () => {
 }
 
 
-newBtn.addEventListener("click", resetGame);
+newBtn.addEventListener("click", newGame);
 
 resetBtn.addEventListener("click", resetGame);
